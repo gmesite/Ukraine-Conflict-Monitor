@@ -1,7 +1,7 @@
 # Ukraine-Conflict-Monitor
-A Shiny dashboard designed for the exporatory analysis of data from ACLED. The data is an event-based dataset, in spreadsheet form, where each row represents an event. The columns have spatial and temporal information, as well as event type, actors involved, etc. To access their data, visit the “Armed Conflict Location & Event Data Project (ACLED) website at www.acleddata.com.”. 
+A Shiny dashboard designed for the exporatory analysis of data from ACLED. The data is an event-based dataset, in spreadsheet form, where each row represents an event. The columns have spatial and temporal information, as well as event type, actors involved, etc. To access their data, visit the “Armed Conflict Location & Event Data Project (ACLED) website at www.acleddata.com.”. To see the dashboard in action see  . Unforunately the dashboard is not available for viewing online but will be available in September. 
 
-I have not included the data in github, as it is against ACLED's terms of service. However, spatial data for Ukraine's subnational administrative boundaries can be downloaded 
+I have not included the ACLED data in github, as it is against ACLED's terms of service. However, spatial data for Ukraine's subnational administrative boundaries can be downloaded 
 for free at https://data.humdata.org/dataset/cod-ab-ukr. I've included those shapefiles here though. 
 
 
