@@ -767,7 +767,7 @@ server <- function(input, output, session) {
   
   # Mapdeck: Initialization
   output$outputMapdeck <- renderMapdeck({
-    mapdeck(token = "pk.eyJ1IjoiZ21lMTQ3OSIsImEiOiJjbGU2YmFuNDcwZjduM25wYnJ2enl1Y3lwIn0.je7BWCeWm_QMb-qP_T8bfg", max_pitch = 60,
+    mapdeck(token = "enter key here", max_pitch = 60,
             min_pitch = 0, pitch = 60, show_view_state = F,
             location = c("34.5", "49"), zoom = 5,
             height = "600", bearing = -80)  
@@ -948,7 +948,7 @@ server <- function(input, output, session) {
     shiny::validate(
       need(input$selected_locations, "")
     )
-    mapdeck(token = "pk.eyJ1IjoiZ21lMTQ3OSIsImEiOiJjbGU2YmFuNDcwZjduM25wYnJ2enl1Y3lwIn0.je7BWCeWm_QMb-qP_T8bfg", max_pitch = 60,
+    mapdeck(token = "enter key here", max_pitch = 60,
             min_pitch = 0, pitch = 60, show_view_state = F,
             location = c("34.5", "49"), zoom = 5,
             height = "600")  
