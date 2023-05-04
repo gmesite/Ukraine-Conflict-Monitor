@@ -13,7 +13,10 @@ library(plyr)
 library(deldir)
 
 
-# Data cleaning/getting stuff ready for the "Data Visualization" part of the shiny app
+# Data Import 
+# I am imported the data into a postgres database, and used important the data from there. 
+# But, all you need is the data from ACLED, the administrative boundaries, for which is included
+# in the github files. 
 # ------------------------------------------------------------------------------------------------------------------------
 
 # Connecting Database 
@@ -23,7 +26,7 @@ con <- dbConnect(
   host = 'localhost',
   port = '5432',
   user = 'postgres',
-  password = 'Ghostrider12!!!'
+  password = '********'
 )
 
 # List tables in my database 
@@ -31,6 +34,7 @@ dbListTables(con)
 # Getting data via database
 # Going to pick one country, Ukraine, because more than one country seems too ambitious
 # and its hot topic at the moment. 
+
 data.acled <- dbGetQuery(con, "SELECT * FROM acled_data")
 ukraine.acled <- dbGetQuery(con, "SELECT * FROM acled_data WHERE country = 'Ukraine'")
 
@@ -51,6 +55,10 @@ ukr.admin.level.1.boundaries <- rpostgis::pgGetGeom(con,
 #                                                   geom = 'geom',
 #                                                   gid = NULL)
 
+# ------------------------------------------------------------------------------------------------------------------------
+
+# Data cleaning/getting stuff ready for the "Data Visualization" part of the shiny app
+# ------------------------------------------------------------------------------------------------------------------------
 
 # Removing 
 # There are a few observations, which don't lie on a particular administrative boundary in the ACLED dataset,
