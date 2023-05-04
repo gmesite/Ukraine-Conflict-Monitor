@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h4>What is the empty space function?</h4>
+      <p>
+        Mathematically in a 2-D plane, the empty space distance can be defined
+        as
+        <span class="math display"
+          ><em>d</em>(<em>u</em>,<em>X</em>) = <em>m</em><em>i</em
+          ><em>n</em>{||<em>u</em> − <em>x</em><sub><em>i</em></sub
+          >|| : <em>x</em><sub><em>i</em></sub
+          > ∈ <em>X</em>}</span
+        >, where u is a arbitrary fixed location, X is a point pattern, and
+        <span class="math display"
+          ><em>x</em><sub><em>i</em></sub></span
+        >
+        is a point in the point pattern. The empty-space function, defined for
+        all distances <span class="math display"><em>r</em> ≥ 0</span>, is
+        <span class="math display"
+          ><em>F</em
+          >(<em>r</em>) = <em>P</em>{<em>d</em>(<em>u</em>,<em>X</em>) ≤ <em>r</em>}</span
+        >. This is the cumulative distribution function of the empty-space
+        distance and may be interpreted as follows:
+        <b
+          >The values of F(r) are probabilities (between 0 and 1) giving, for
+          any fixed reference location u, the chance that there will be a point
+          of X lying within distance r of this location.</b
+        >. In a similar fashion to the K-Function, we compare the empirical
+        empty space function estimated from the data, with the empty space
+        function for a homogeneous poisson process (for a completely random
+        pattern). The estimator used in this dashboard for the empty space
+        function assume that the point process is stationary, and
+        <b
+          >experience suggests that the choice of edge correction is not very
+          important so long as some edge correction is performed.</b
+        >
+      </p>
+      <h4>Interpretation</h4>
+      <p>
+        The interpretation of the empirical empty space function F(r), is
+        opposite of that of the K-Function, if the empirical empty-space
+        function is above the theoretical version for a homogeneous poisson
+        process with the same average intensity, this means for
+        <b
+          >for a given distance r, the estimated probability that
+          <span class="math display"
+            ><em>d</em>(<em>u</em>,<em>X</em>) ≤ <em>r</em></span
+          >
+          is greater than it would be in a completely random pattern.
+          Consequently the empty-space distances are shorter than expected if
+          the pattern were completely random. This is consistent with a regular
+          pattern.</b
+        >
+        Similarly if the empirical empty space function estimated from the data
+        is below the theoretical version for a homogeneous poisson process with
+        the same average intensity, this means that the probability for a given
+        distance r, that a arbitrary location u will have a point of X lying
+        within a distance r is lower than that of a completely random pattern,
+        indicating that
+        <b>
+          the empty-space distances are larger than would be expected if the
+          corresponding pattern were completely random; this is consistent with
+          clustering.</b
+        >
+      </p>
+
+      <h4>Inhomogeneous Version</h4>
+      <p>
+        There is a inhomogeneous version, details of which can be found in
+        M.N.M. van Lieshout. A J-function for inhomogeneous point patterns. The
+        required assumption is that the
+        <b
+          >'k-point correlation functions' for all
+          <span class="math display"><em>k</em> ≥ 2</span> are invariant under
+          translations</b
+        >, with the additional assumption that the true intensity function is
+        positive for all locations u.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h4>Introduction</h4>
+      <p>
+        There are many things we could look at from this dashboard, in fact, I
+        would love to add much more, combine this with other data perhaps, add
+        locations to the spatstat plots, but, time is limited. So I've included
+        one example exploratory analysis, concluding the dashboard's contents.
+        The screenshots of the estimated intensity functions below are from the
+        "Point Pattern: Intensity" tab, for which I used the default options. I
+        had nothing particular in mind, when I decided to take screenshots of
+        the estimated intensity function, and voronoi diagram, at monthly
+        intervals from January 2022 to December 2022, for Armed Clashes and
+        Shelling/Missile/Artillery Attacks, for the entirety of Ukraine. Simply,
+        I thought it would be a good idea, considering, these two events
+        encompass a large portion of event types in my dataset, because, perhaps
+        I could see something I could not see from the multiple bar chart, or
+        maps box, and indeed I did. There is a lot to observe, so I'll go month
+        by month. I'll use SAM to denote Shelling/Artillery/Missile.
+      </p>
+      <h4>Example Exploratory Analysis</h4>
+      <p>
+        In January, Armed clashes and SAM attacks seem to be relatively in
+        common from the Kernel estimated intensities, and Voronoi diagrams. One
+        must remember that these are fixed bandwidth smoothers, which tend to
+        smooth out the boundaries between high and low intensity areas, and
+        evidently, it has a large smoothing bandwidth, so that explains the
+        large discrepancy between the Voronoi diagram and Kernel estimated
+        intensity. In February, we can see armed clashes in the east are
+        creeping westward, and there is a number of armed clashes near the
+        north-center part of the country (I think is Kyiv). The shellings have
+        stayed pretty much the same for the kernel estimation graph, but the
+        Voronoi Diagram tells a different story. Again, this is the discrepancy
+        of using this particular default setting, areas of low intensity SAM
+        attacks don't appear at all in the west. The Voronoi Diagram is saying
+        something is happening similar to the Voronoi diagram of armed clashes,
+        but also there is a marked increase in SAM attacks in the east. In
+        March, we can see that SAM attacks start appearing in the west along
+        with an uptake in armed clashes in that area. The Voronoi diagrams tells
+        us that there is a general increase in SAM attacks and armed clashes in
+        the east. In April, looking at the estimated intensities, armed clashes
+        and SAM attacks have altogether disapeared in the Kyiv region (although
+        the Voronoi diagram says that some SAM attacks occurred), and both
+        intensities seem to have receded eastward, but armed clashes are still
+        appearing in the South. What should be evident from the Voronoi
+        diagrams, if you look at them in succession (especially after April),
+        there is sort of a shape being formed by smaller polygons, additionally,
+        the SAM attacks have a more defined shape, and are encroaching eastward. And evidently, the number of armed clashes seems to diminish. 
+        This reminded me of listening to podcast on geopolitics about Ukraine. In particular for the winter months I heard that it was going to be 
+        a war of attrition, that is, a lot of shelling eachother, not a lot of offensives, I heard the ground freezes over too, so seeing the number of armed clashes decrease and SAM attacks increase, I think, may legitimately be provided as evidence for that. Of course, any analyst, who's job is to study war and comb through thousands of reports by government officials and media on how the war is going, in addition to looking at satellite imagery to confirm those statements, from what I understand the people at the Institute for the Study of War are doing, they probabily don't need these evidential assists. 
+      </p>
+    </div>
+  </body>
+</html>

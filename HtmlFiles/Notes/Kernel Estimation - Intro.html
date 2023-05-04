@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div>
+        <h4>Kernel Estimation</h4>
+        <p>Kernel estimation is a nonparametric method for estimating the intensity function of a point process. The analogy the book uses is of chocolate. Consider a point pattern dataset, and at each of the point locations you place a piece of chocolate and take a hair dryer to melt it slightly. The result is a rising and lowering surface of chocolate, for which the height of the chocolate represents the estimated value of the intensity. We won't go into the mathematical details. </p>
+
+        <h4>Smoothing Bandwidth</h4>
+        <p>Mathematical formulae are used to estimate the intensity, included in this formula is a probability density function called a <i>kernel</i>. The <i>smoothing bandwidth</i>
+        of the kernel is its standard deviation. A smaller bandwidth gives less smoothing and a larger bandwidth gives more. In the chocolate analogy, the smoothing bandwidth is the amount of melting. By default, the smoothing is performed using a Gaussian kernel, however other two dimension kernels are available (""gaussian", "epanechnikov", "quartic", "disc"). The user has the option of seeing how different smoothing bandwidths affect the estimated intensity, again more details are provided by <i>Spatial Point Patterns: Methodology and Applications with R</i>.</p>
+
+        <h4>Fixed Bandwidth Smoothers</h4>
+        <p>Fixed bandwidth smoothers kernel estimators that use the same kernel and smoothing bandwidth to estimate the intensity at different spatial locations. If the true intensity of the point process varies greatly across the spatial domain, fixed bandwidth smoothers will tend to smooth any boundaries between areas of high and low areas out. Again, there are a few more problems associated with fixed bandwidth smoothers that we won't detail. However, some of the solutions of the problems is by using variable-bandwidth smoothing or adaptive smoothing techniques.  </p>
+
+        <h4>Edge correction</h4>
+        <p>Edge corrections are used to obtain unbiased results for point pattern analysis. In <i>A comparison of methods for the statistical analysis of spatial point patterns in plant ecology</i> written by George Perry, Ben Miller, and Neal Enright in 2006, it reads "Most spatial statistics require some form of edge correction. Edge effects arise because the theoretical distributions for most spatial point patterns assume an unbounded area, yet observed distributions are estimated from delineated regions." In other words, there is some potential bias that is introduced when estimating the intensity function because we've bounded our point pattern. Edge correction techniques are used to correct for this bias, in kernel estimation, and other methods used in this dashboard. Switching to TRUE in the "Jones-Diggle Improved Edge Correction" switch, as detailed in the R documentation, "uses the improved edge correction described by Jones (1993, Simple Boundary corrections for kernel density estimation. <i> Statistics and Computing 3</i>) an Diggle (2010, equation 18.9, Handbook of Spatial Statistics, CRC Press). </p>
+
+    </div>
+  </body>
+</html>

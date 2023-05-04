@@ -1,0 +1,22 @@
+
+<p>
+    In <i> Spatial Point Patternss: Methodology and Applications with R</i>, called "Point Process Methods", the authors define standard assumptions of point pattern analysis. Let region <b>A</b> denotes the <i> sampling window</i> which denotes the space for which the points are assumed to be bounded within. 
+    <br> 
+    <ol>
+        <li> <b> Points are measured exactly;</b> </li>
+        <li> <b> No two points lie at exactly the same location;</b></li>
+        <li> <b> Points are mapped without omission, i.e. there are no errors in detecting the presence of points of the random process within the region A. </b> </li>
+        <li> <b> Points could have been observated at any location in the region A</b></li>
+    </ol>
+</p>    
+
+<p>
+    The nature of the events in examination are battles, explosions, riots, protests, etc. Our dataset does include
+    a spatial precision column which indicates how precise the locations are. The majority of our observations are of the highest precision level. Each observation is derived from a report, and if the report denotes a town and if coordinates are available for that town, the highest precision level is recorded. 
+
+    The dataset did include a lot of points that were at exactly the same location. There are a few ways to deal with this, one way is to move the points a negligible amount in random directions (jittering), and another is to include the number of points at a particular location as a mark. 
+
+    The third assumption is probably inappropriate in our context. One should immediately be reminded that the locations of the dataset are in a warzone. 
+
+    The fourth assumption is definitely violated. The violation is obvious for specific events such as protests and riots, as these events will generally happen in large population centers or key governming areas such as capital buildings, and not faming land. Whether or not battles or explosions satisfy this assumption is up for debate, but for our purposes we'll assume it's satisified. It may be better to treat these events as occuring on network of roads and highways and those assumptions may be entirely different. 
+</p>

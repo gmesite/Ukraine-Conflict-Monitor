@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<script
+  type="text/javascript"
+  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM-CHTML"
+></script>
+
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h4>What are r-neighbours?</h4>
+      <p>The number of r-neighbours a point X in a point pattern data has, is the number of points lying with a circle of radius r, centered at the point X.</p>
+
+      <h4>What is the K-Function?</h4>
+      <p>
+        The K-Function is a very popular technique for analyzing spatial
+        correlation between points. The assumption required before applying the K-Function is that the point process is stationary. The rationale for interpretating the
+        K-Function is by comparing it with the theoretical K-Function of a
+        homogeneous poisson process with the same average intensity. In
+        particular, there is line denoting
+        <span class="math display"
+          ><em>K</em><sub><em>p</em><em>o</em><em>i</em><em>s</em></sub
+          >(<em>r</em>)</span
+        >, which is the theoretical K-function for homogeneous poisson point
+        pattern, and a line that denotes the empirical K-Function calculated
+        from the data (the selected point pattern data). To quote from the book again, 
+        the empirical K-Function is <b>the cumulative average number of data points lying within a distance r of a typical data point, corrected for edge effects, and standardised by dividing by the intensity. The standardisation and edge correction make it possible to compare point patterns with different numbers of points, observed in different windows.</b> If the empirical K-Function calculated from the data is above the theoretical K-Function for a homogeneous poisson process with the same average intensity, this indicates that the point pattern of interest has more r-neighbours than would be expected for a completely random pattern (that of a homogeneous poisson process in which we are comparing), indicating clustering. If the empirical K-Function calculated from the data is below the theoretical version, this indicates that the point pattern of interest has less r-neighbours than would be expected for a completely random pattern, indicating repulsion/regularity/inhibition.
+      </p>
+
+      <h4>What happens when you interpret the K-Function, assuming a non-stationary process?</h4>
+      <p>If the point process is assumed to be non-stationary, variations between the theoretical and empirical K-Functions may not be evidence of interpoint interaction, because it variations may be attributable to variations in spatial intensity. </p>
+
+      <h4>Inhomogeneous K-Function</h4>
+      <p> As the name suggest, this is like the K-Function, except that it deals with inhomogeneous point patterns. The assumption behind the inhomogeneous K-Function is that the process is correlation-stationary. Our book <i>Spatial Point Patterns: Methodology and Applications with R</i>, doesn't detail this from my understanding. But I think it's similar to trend-stationarity in time series, I'm exactly sure, could be wrong. The interpretation is the same. </p>
+
+      <h4>Other Functions</h4>
+      <p>There are a number of other functions included in the dashboard, the L-Function, Inhomogeneous Pair Correlation Function, Sector K-Function, however we'll not delve into the details here. Since, the primary interest of this section is find a way to assess interpoint interaction, clustering/repulsion/random patterns, although the other functions may be useful, it would be better to leave explanation for other sources.</p>
+    </div>
+  </body>
+</html>

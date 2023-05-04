@@ -1,0 +1,128 @@
+<script
+  type="text/javascript"
+  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM-CHTML"
+></script>
+
+<main>
+
+
+<h3>Intro</h3>
+<p>
+  This section introduces the concept of the point pattern, which lays the
+  foundation for the majority of future sections. We'll frequently be referencing <i> Spatial Point Patterns: Methodology and Applications with R</i>
+  by Adrian Baddeley, Ege Rubak, and Rolf Turner, bolded text is used to mark direct quotations. So what is a point pattern? It
+  is a dataset giving the spatial location of things. A point process is a
+  random mechanism whose outcomes are point patterns. Consider a dataset showing
+  the location of car accidents, with 2 columns displaying the X coordinates and
+  Y coordinates. It would be natural to characterize the phenomenon in terms of
+  a random variable. What's random about our car accidents? We can assume that
+  the values of the X coordinates and Y coordinates are random and that they
+  have probability distributions, say
+  <span class="math display"
+    ><em>f</em><sub><em>X</em></sub
+    >(<em>x</em>)</span
+  >
+  and
+  <span class="math display"
+    ><em>f</em><sub><em>Y</em></sub
+    >(<em>y</em>)</span
+  >
+  respectively and further we can define their joint distribution
+  <span class="math display"
+    ><em>f</em><sub><em>X</em>, <em>Y</em></sub
+    >(<em>x</em>,<em>y</em>)</span
+  >
+  as the probability distribution of the locations of car accidents. What would
+  be the probability that a random car accident U would occur inside a region B?
+  The integral of the joint distribution over the region B.
+  <span class="math display"
+    ><em>P</em>{<em>U</em> ∈ <em>B</em>} = ∫<sub><em>B</em></sub
+    ><em>f</em><sub><em>X</em>, <em>Y</em></sub
+    >(<em>x</em>,<em>y</em>)<em>d</em><em>x</em><em>d</em><em>y</em>
+  </span>
+  Let X denote a point process and
+  <span class="math display"><em>n</em>(<em>X</em>∩<em>B</em>)</span> the number
+  of points falling inside a region B. There exists a intensity function
+  <span class="math display"><em>λ</em>(<em>u</em>)</span> such that
+  <span class="math display"
+    ><em>E</em>[<em>n</em>(<em>U</em>∩<em>B</em>)] = ∫<sub><em>B</em></sub
+    ><em>λ</em>(<em>u</em>)<em>d</em><em>u</em></span
+  >, that is the expected number of points falling inside a region B is the
+  integral of the intensity function over that region.
+</p>
+<h3>Marks and Covariates</h3>
+<p>
+  If we added more information to our car accident example, say the type of
+  accident (T-bone, rear-ends, etc.), this would be called a marked point
+  pattern, or a multi-type point pattern. There is a distinction made between a
+  mark and a coviarate. A mark is a variable that is considered part of the
+  response in any point pattern, whereas a covariate would be as is, a
+  explanatory variable. In addition we're also assuming (for any point pattern)
+  that location is part of the response. For our purposes we won't be using
+  covariate information, although if you do decide to add covariates, make sure
+  they are observed not only at point pattern locations, but other locations as
+  well.
+</p>
+
+<h3> Observation windows</h3>
+<p> 
+    Consider a 2-D point pattern giving the locations of endangered Clanwilliam Cedar trees (found in the Cedarberg Mountains of South Africa). If we didn't know anything about why those trees are located there, we might assume that the point process that gave rise to the point pattern is defined on a infinite two-dimensional plane. Baddely, Rubak, and Turner call this "window sampling" with the following properties:
+    <div>
+      <p style = "text-indent: 30px;">
+          <ol>
+              <li> <b> The point process X that is the focus of interest is a locally finite point process on the infinite two-dimensional plane;</b></li>
+              <li> <b> Points are only observed inside a region W, the 'sampling window' or 'study region', that is fixed and known</b></li>
+              
+          </ol>
+      </p>
+  </div>
+  
+    Baddely, Rubak, and Turner also describe a "small world model" in which a point process X is a "finite point process in a known, fixed, bounded region W". The small world model is what we will assume about our data. In particular, we will assume that the point process that gives rise to battles, explosions, etc., occurs in a known, fixed, and bounded region (Ukraine). 
+    The observation window W of a point pattern will be used to denote the region in which points can be located, with no points being located outside that region. An observation window is required whenever you create a point pattern as a <i>ppp</i> object in the R package spatstat. If points lie outside the observation window, or if you have duplicated points, spatstat will give you a warning. 
+
+</p>
+
+<h3> Homogeneous and Inhomogeneous Poisson Point Processes</h3>
+<p>
+
+</p>
+There are two types of point processes that are of particular importance, namely homogeneous and inhomogeneous poisson point procceses. For explaining both concepts, we will take two exerpts from <i> Spatial Point Patternss: Methodology and Applications with R</i>.
+
+Note: A locally finite point pattern is a point pattern that for any bounded region B, contains a finite number of points. 
+    <div>
+        <p style = "text-indent: 30px;">
+        
+            <b>In summary, the homogeneous Poisson point process (or 'complete spatial randomness', CSR) with intensity <span class="math display"><em>λ</em> &gt; 0</span> 
+            is a locally finite point process with properties of </b>
+            <ol>
+                <li> <b> homogeneity: the number of random points <span
+                    class="math display"><em>n</em>(<em>X</em>∩<em>B</em>)</span> falling in a test region B has mean value <span
+                    class="math display"><em>E</em><em>n</em>(<em>X</em>∩<em>B</em>) = <em>λ</em>|<em>B</em>|;</span></b> </li>
+                <li> <b> independence: for test regions <span
+                    class="math display"><em>B</em><sub>1</sub>, <em>B</em><sub>2</sub>, ...<em>B</em><sub><em>m</em></sub></span> which do not overlap, the counts <span
+                    class="math display"><em>n</em>(<em>X</em>∩<em>B</em><sub>1</sub>), ..., <em>n</em>(<em>X</em>∩<em>B</em><sub><em>m</em></sub>)</span> are independent random variables;</b></li>
+                <li> <b> Poisson distribution: the number <span
+                    class="math display"><em>n</em>(<em>X</em>∩<em>B</em>)</span> of random point falling in a test region B has a Poisson distribution (5.4). </b> </li>
+            </ol>
+        </p>
+    </div>
+    Observe that the intensity of a homogeneous poisson point process is constant, so the expected number of point falling in a region B is proportional to the size of that region. As for independence, it simply means that what happens in any region B, does not affect the outcome of any other regions in the observation window. 
+    <div>
+        <p style = "text-indent: 30px;">
+            <b>
+                The inhomogeneous Poisson point proccess with intensity function <span class="math display"><em>λ</em>(<em>u</em>)</span> is defined by the following properties:
+            </b>
+            <ol>
+                <li> <b> intensity function: the expected number of points falling in a region B is the integral <span
+                    class="math display"><em>μ</em> = ∫<sub><em>B</em></sub><em>λ</em>(<em>u</em>)<em>d</em><em>u</em></span> of the intensity function <span class="math display"><em>λ</em>(<em>u</em>)</span> over the region B; </li>
+                <li> <b> independence: if space is divided into non-overlapping regions, the random patterns inside these regions are independent of each other;</b></li>
+                <li> <b> Poisson-distributed counts: the random number of points falling in a given region has a Poisson probability distribution; </b> </li>
+            </ol>
+        
+        
+        </p>
+    </div>
+    
+
+</main>

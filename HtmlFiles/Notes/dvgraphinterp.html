@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h3>Data Visualization: Graphical Interpretations</h3>
+      <p>Multiple Bar Chart: Consider the default options for data, specified initially in the 'Time Series Visualization' options box. 
+        The dates were between 2022-02-24 and 2023-01-13, the locations were Donetsk and Luhansk, and the event types were "Shelling/artillery/missile attack", "Armed clash",
+    "Attack", "Remote explosive/landmine/IED", and "Air/drone strike". The correct interpreation of the multiple bar chart would be, for example, between February 24th 2022 and January 13th 2023 in Donetsk, there were 827 air/drone strikes, 2999 armed clashes, 72 remote explosive/landmine/IED incidents, 10144 shelling/artillery/missile attacks and 0 events classified as attacks, and further, between February 24th 2022 and January 13th 2023 in Luhansk, there were 96 air/drone strikes, 821 armed clashes, 0 remote explosive/landmine/IED incidents, 1447 shelling/artillery/missile attacks and 17 events classified as attacks. In addition, the data used for this box can be shown in table format in the information bar in the 'Data Tables' box. Note: The data in the multiple bar chart is the same data used in the time series visualization, just aggregated based off the date interval. </p>
+      <p>Time Series Visualization: Consider again default options for data, specified initially in the 'Time Series Visualization' options box. Looking at one date in particular, September 21st 2022, in Luhansk and Donetsk, there were 72 shelling/artillery/missile attacks, 12 armed clashes, 1 remote explosive/landmine/IED incident, 2 air/drone strikes and 0 attacks. </p>
+      <p>Event Distributions: Recall, the data showed in this box has been filtered from the options menu in 'Maps' box. Essentially, the data set used in this box
+        is a tabulation of the number of events of each type, filtered by the event type and an interval of dates, excluding filtering by adminstrative level (location).</p>
+      <p>Maps: The map tab consist of 3 types of map visualizations. A 3-D hexagonal map, a chlorpleth map, and a heatmap.
+        <ul>
+            <li>3-D Hexagonal Map: The height of the lines represents the number of events that has occured as that particular location. The number of events is 
+                a sum of the number of events that has occured in that particular location for all events selected in the options menu of the 'Map' box. For example, consider the default data selection options of the 'Maps' box, for any dot or line showing, the color and height at a particular location demonstrate the number of events (no matter the type of event, since all events types were selected in the default selection) that has occured there between February 24th 2022 and January 13th 2023. 
+            </li>
+            <li>Heatmap: The interpretation here would be akin to the 3-D hexagonal map, but instead of rendering dots and lines, it uses gaussian kernel density estimation to render a heatmap. 
+            </li>
+            <li>3-D Chloropleth: Similar to heatmap and 3-D hexagonal. </li>
+        </ul>  
+      </p>
+
+    </div>
+  </body>
+</html>

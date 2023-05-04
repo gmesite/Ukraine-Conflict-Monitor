@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h4>What is the nearest-neighbour distance distribution function?</h4>
+      <p>
+        First, we must define mathematically the nearest neighbour distance. Let
+        X be a point pattern, where
+        <span class="math display"
+          ><em>x</em><sub><em>i</em></sub></span
+        >
+        is a point of the pattern. The nearest neighbour distance may be defined
+        as
+        <b
+          ><span class="math display"
+            ><em>d</em><sub><em>i</em></sub
+            > = <em>d</em>(<em>x</em><sub><em>i</em></sub
+            >,<em>X</em>∖<em>x</em><sub><em>i</em></sub
+            >)</span
+          >, the shortest distance from
+          <span class="math display"
+            ><em>x</em><sub><em>i</em></sub></span
+          >
+          to the pattern
+          <span class="math display"
+            ><em>X</em> ∖ <em>x</em><sub><em>i</em></sub></span
+          >
+          consisting of all points of X except
+          <span class="math display"
+            ><em>x</em><sub><em>i</em></sub></span
+          ></b
+        >. Then the nearest neighbour distance distribution function (the cumulative distribution function of the nearest neighbour distance at a typical point of X) <b>is defined by <span
+            class="math display"><em>G</em>(<em>r</em>) = <em>P</em>{<em>d</em>(<em>u</em>,<em>X</em>∖<em>u</em>) ≤ <em>r</em>|X
+            has a point at u}</span></b>. The required assumption of using this technique is the same as the empty-space function, that is, the point process is stationary. The interpretation of the function is of the same vein as the empty space function and the K-function, in the sense that we are comparing the nearest neighbour distance distribution function calculated from the data, to that of the theoretical nearest neighbour distance distribution function for a homogeneous poisson process with the same average intensity. However, one must remember that the nearest neighbour distance distribution function and empty space functions are cumulative distributions, hence on the y-axis the values are from 0 to 1. 
+      </p> 
+
+      <h4>Interpretation</h4>
+      <p>The nearest neighbour distance distribution function has a similar interpretation to that of the K-Function, if the empirical G(r) calculated from the data is greater than that for a homogeneous poisson process with the same average intensity, it means that the probability that a typical point will have a nearest neighbour lying within a distance r of that point is greater than that of a completely random pattern, <b> indicating that the nearest-neighbour distances in the data are shorter than expected for a completely random pattern. This is consistent with clustering.</b> If the empirical G(r) calculated from the data is below that of theoretical version, it means that the probability a typical point will have a nearest neighbour lying with a distance r of that point is less than that of a completely random pattern indicating that the nearest-neighbour distance in the data are longer than expected for a completely random pattern, which is consistent with a regular point pattern, that is, the points tend to stay away from eachother.</p>
+      
+      <h4>Inhomogeneous Version</h4>
+      <p>Refer to the section on the empty-space function. Same assumption. The paper referred is the same paper referred to in <i>Spatial Point Patterns:Methodology and Applications with R</i>.</p>
+    </div>
+  </body>
+</html>

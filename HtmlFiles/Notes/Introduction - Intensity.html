@@ -1,0 +1,63 @@
+<script
+  type="text/javascript"
+  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM-CHTML"
+></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div>
+      <h4>What is Intensity?</h4>
+      <p>
+        Intensity can have different interpretations depending on the context. Someone studying the spatial distribution of crime in the metropolitan area of New York City might
+        want to collect data on the # of crimes within each individual police precinct. For example, 10 crimes a week for this precinct, 20 crimes a week for that precinct. Here intensity is with respect to time and location (week and precinct), although you might not study it as a point pattern because precincts have strict geographical boundaries. Additionally, intensity can be interpreted as a "weighted" intensity. For example, a car insurance company would like to assess the risk of a driver getting into a car accident in a city. In particular, they would like to include information on the weight of the car the driver is driving, so they collect data on where car accidents are located within the city, and also record the weight of the cars that were involved in the accidents. We can interpret the data as a point pattern, study its intensity, and interpret it as the average weight of a vehicle involved in a car accident per square mile. In one area, maybe there are more semi-trucks involved in car accidents, so that area would have a higher intensity than other areas. In our dataset, we have a dataset containing (after filtering the date and event type) the point locations, a column containing event type, and a column containing number of occurences of that event. Here, the number of occurences of a particular event in a particular location, acts as a weight. In particular, whenever we do kernel estimation of the intensity function in R, we specify that column as the weights. 
+      </p>
+      <h4>Homogeneous Intensity</h4>
+      <p>
+        A point pattern will have homogeneous intensity if the expected number
+        of points falling within a region B, is proportional to
+        <span class="math display"><em>λ</em>|<em>B</em>| </span> where
+        <span class="math display"><em>λ</em></span>
+        is constant. In other words, if the expected number of points falling
+        within a region B is only dependent on the size of the region B, the
+        point pattern is said to have homogeneous intensity. In addition, a
+        general summary statistic of the overall intensity of the point pattern
+        may be the number of points in the point pattern data set, divided by
+        the area of the window, giving you points per unit area.
+      </p>
+      <h4>Inhomogeneous Intensity</h4>
+      <p>
+        A point pattern with inhomogeneous intensity is a point pattern with
+        spatially varying intensity. The summary statistic considered above
+        would not be as appropriate for a point pattern with spatially varying
+        intensity because it could be that some regions have high numbers of
+        points and some regions have low numbers of points. So a bit more
+        complexity is needed. Let
+        <span class="math display"><em>λ</em>(<em>u</em>)</span> be the
+        intensity, a function of spatial location
+        <span class="math display"><em>u</em></span
+        >.
+        <b
+          >More precisely, in a small neighbourhood of the location
+          <span class="math display"><em>u</em></span
+          >, with small area <span class="math display"><em>a</em></span
+          >, the expected number of points is approximately equal to
+          <span class="math display"><em>λ</em>(<em>u</em>)<em>a</em></span
+          >. For any region B, we may imagine dividing B into pixels,
+          calculating the expected number of points in each pixel, and adding up
+          these expected numbers to obtain the expected total number of points
+          in B. This sum is effectively the integral of the intensity function
+          <span class="math display"
+            ><em>E</em>[<em>n</em>(<em>X</em>∩<em>B</em>)] = ∫<sub
+              ><em>B</em></sub
+            ><em>λ</em>(<em>u</em>)<em>d</em><em>u</em></span
+          >
+          for any given region B. We can think of
+          <span class="math display"><em>λ</em>(<em>u</em>)</span> as an
+          undulating surface whose height represents the intensity.</b
+        >
+      </p>
+    </div>
+  </body>
+</html>

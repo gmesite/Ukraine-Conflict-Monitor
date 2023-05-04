@@ -1,0 +1,24 @@
+<p> 
+    If a point pattern is <i> spatially homogeneous</i>, it means that the points in the pattern have no preference for any particular location. A spatially inhomogeneous point 
+    pattern is one in which the points do have a preference. In our data set, we see that Donetsk and Luhansk are hot spots for event relating to explosions and battles. We'll use
+    a few different nonparametric methods to estimate the intensity of a point pattern, namely, quadrat counting and kernel estimation. 
+    
+    <ul> 
+        <li>
+            <b>Quadrat counting:</b> is a method for checking for spatial inhomogeneity. The idea is to divide the window of observations into equally sized regions and count the number of points in each region. To expect spatial homogeneity of protests, for instance, we'd expect the number of protests in each region to be approximately the same for every region. To expect spatial inhomogeneity of protests would be analogous to expecting that the number of protests are distinctively high in particular regions, and distinctively low for other regions. We can also conduct statistical tests based on this idea of quadrat counting. However we'll avoid this method unless it is unclear whether or not there is
+            spatial inhomogeneity.
+        </li>
+        <li>
+            <b>Kernel estimation:</b>  "Our favorite analogy is to imagine placing one square chocolate on each data point. Using a hair dryer we apply heat to the chocolate so that 
+            it melts slightly. The result is an undulating surface of chocolate; the height of the surface represents the estimated intensity function of the process. The total mass
+            of chocolate is unchanged." There are a few things to keep in mind about kernel estimation: 1. It is nonparametric, 2. It gives an estimate of the <b> intensity function</b>
+            of our point pattern 3. Imagine f(X) = something mathy, where f(X) is the estimate of the intensity as a function of location, and 'something mathy' contains a <i>kernel function</i> , that controls the characteristics of the estimated intensity (namely its variance or bias). Variance in this context would refer to how the intensity estimate varies by location (does it vary a lot over a small/large distances? Is it relatively constant?). And bias would refer to the difference between the estimated intensity at a location and its actual intensity (I should verify this). 4. Edge effects. Kernel estimation is discussed in more detail in another section. 
+        
+        </li>
+        
+
+
+    </ul>
+
+
+</p>
