@@ -5,6 +5,19 @@ A Shiny dashboard designed for the exporatory analysis of data from ACLED. The d
 I have not included the ACLED data in github, as it is against ACLED's terms of service. However, spatial data for Ukraine's subnational administrative boundaries can be downloaded 
 for free at https://data.humdata.org/dataset/cod-ab-ukr. I've included those shapefiles here though. 
 
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/4891e410-3fce-41f9-b400-3dddfcdf607c)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/4436d47c-c3d0-452e-b8fc-af40a3066214)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/558ea35e-9142-4632-9fe6-fa2db4fee255)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/76c783d1-83c9-4ea1-8630-e8fed7644784)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/e5d57a45-11cf-41b6-879f-d5de0e1d727b)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/ff47dce0-2ba5-4053-a48a-f54010a1dcd6)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/7860f9f8-194d-4556-b4b9-9ffb38abf8f8)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/e3f4916b-8d53-4703-a5a0-edd52221c05f)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/396f7ce9-e104-49e8-8e36-6afc97ef7c21)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/ad9515ee-7b9a-4fdb-9e41-73781882a8a3)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/0f64e862-ba33-4888-aaf9-9c8139bb3e2e)
+![image](https://github.com/EliGacasan/Ukraine-Conflict-Monitor/assets/110142627/fd87b766-9506-41f0-858f-f27b855beba4)
+
 
 Citations: 
 1. Raleigh, C., Linke, A., Hegre, H., & Karlsen, J. (2010). “Introducing ACLED: An armed conflict
